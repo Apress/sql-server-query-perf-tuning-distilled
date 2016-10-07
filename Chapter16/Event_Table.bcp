@@ -1,0 +1,119 @@
+0|Reserved|Reserved
+1|Reserved|Reserved
+2|Reserved|Reserved
+3|Reserved|Reserved
+4|Reserved|Reserved
+5|Reserved|Reserved
+6|Reserved|Reserved
+7|Reserved|Reserved
+8|Reserved|Reserved
+9|Reserved|Reserved
+10|RPC:Completed|Occurs when a remote procedure call (RPC) has completed.
+11|RPC:Starting|Occurs when an RPC has started.
+12|SQL:BatchCompleted|Occurs when a Transact-SQL batch has completed.
+13|SQL:BatchStarting|Occurs when a Transact-SQL batch has started.
+14|Login|Occurs when a user successfully logs in to SQL Server.
+15|Logout|Occurs when a user logs out of SQL Server.
+16|Attention|Occurs when attention events, such as client-interrupt requests or broken client connections, happen.
+17|ExistingConnection|Detects all activity by users connected to SQL Server before the trace started.
+18|ServiceControl|Occurs when the SQL Server service state is modified.
+19|DTCTransaction|Tracks Microsoft Distributed Transaction Coordinator (MS DTC) coordinated transactions between two or more databases.
+20|Login Failed|Indicates that a login attempt to SQL Server from a client failed.
+21|EventLog|Indicates that events have been logged in the Microsoft Windows NT® application log.
+22|ErrorLog|Indicates that error events have been logged in the SQL Server error log.
+23|Lock:Released|Indicates that a lock on a resource, such as a page, has been released.
+24|Lock:Acquired|Indicates acquisition of a lock on a resource, such as a data page.
+25|Lock:Deadlock|Indicates that two concurrent transactions have deadlocked each other by trying to obtain incompatible locks on resources the other transaction owns. 
+26|Lock:Cancel|Indicates that the acquisition of a lock on a resource has been canceled (for example, due to a deadlock).
+27|Lock:Timeout|Indicates that a request for a lock on a resource, such as a page, has timed out due to another transaction holding a blocking lock on the required resource. Time-out is determined by the @@LOCK_TIMEOUT function, and can be set with the SET LOCK_TIMEOUT statement. 
+28|DOP Event|Occurs before a SELECT, INSERT, or UPDATE statement is executed. 
+29|Reserved |Use Event 28 instead.
+30|Reserved |Use Event 28 instead.
+31|Reserved |Use Event 28 instead.
+32|Reserved|Reserved
+33|Exception|Indicates that an exception has occurred in SQL Server. 
+34|SP:CacheMiss|Indicates when a stored procedure is not found in the procedure cache.
+35|SP:CacheInsert|Indicates when an item is inserted into the procedure cache.
+36|SP:CacheRemove|Indicates when an item is removed from the procedure cache.
+37|SP:Recompile|Indicates that a stored procedure was recompiled.
+38|SP:CacheHit|Indicates when a stored procedure is found in the procedure cache.
+39|SP:ExecContextHit|Indicates when the execution version of a stored procedure has been found in the procedure cache.
+40|SQL:StmtStarting|Occurs when the Transact-SQL statement has started.
+41|SQL:StmtCompleted|Occurs when the Transact-SQL statement has completed.
+42|SP:Starting|Indicates when the stored procedure has started.
+43|SP:Completed|Indicates when the stored procedure has completed.
+44|SP:StmtStarting|Occurs when the Transact-SQL statement in stored procedure has started.
+45|SP:StmtCompleted|Occurs when the Transact-SQL statement in stored procedure has completed.
+46|Object:Created|Indicates that an object has been created, such as for CREATE INDEX, CREATE TABLE, and CREATE DATABASE statements.
+47|Object:Deleted|Indicates that an object has been deleted, such as in DROP INDEX and DROP TABLE statements.
+48|Reserved|
+49|Reserved|
+50|SQL Transaction|Tracks Transact-SQL BEGIN, COMMIT, SAVE, and ROLLBACK TRANSACTION statements.
+51|Scan:Started|Indicates when a table or index scan has started.
+52|Scan:Stopped|Indicates when a table or index scan has stopped.
+53|CursorOpen|Indicates when a cursor is opened on a Transact-SQL statement by ODBC, OLE DB, or DB-Library.
+54|Transaction Log|Tracks when transactions are written to the transaction log.
+55|Hash Warning|Indicates that a hashing operation (for example, hash join, hash aggregate, hash union, and hash distinct) that is not processing on a buffer partition has reverted to an alternate plan. This can occur because of recursion depth, data skew, trace flags, or bit counting.
+56|Reserved|Reserved
+57|Reserved|Reserved
+58|Auto Stats|Indicates an automatic update or creation of index statistics has occurred.
+59|Lock:Deadlock Chain|Produced for each of the events leading up to the deadlock.
+60|Lock:Escalation|Indicates that a finer-grained lock has been converted to a coarser-grained lock (for example, a row lock escalated or converted to a page lock).
+61|OLE DB Errors|Indicates that an OLE DB error has occurred.
+62|Reserved|Reserved
+63|Reserved|Reserved
+64|Reserved|Reserved
+65|Reserved|Reserved
+66|Reserved|Reserved
+67|Execution Warnings|Indicates any warnings that occurred during the execution of a SQL Server statement or stored procedure.
+68|Execution Plan|Displays the plan tree of the Transact-SQL statement executed.
+69|Sort Warnings|Indicates sort operations that do not fit into memory. Does not include sort operations involving the creating of indexes; only sort operations within a query (such as an ORDER BY clause used in a SELECT statement).
+70|CursorPrepare|Indicates when a cursor on a Transact-SQL statement is prepared for use by ODBC, OLE DB, or DB-Library.
+71|Prepare SQL|ODBC, OLE DB, or DB-Library has prepared a Transact-SQL statement or statements for use.
+72|Exec Prepared SQL|ODBC, OLE DB, or DB-Library has executed a prepared Transact-SQL statement or statements.
+73|Unprepare SQL|ODBC, OLE DB, or DB-Library has unprepared (deleted) a prepared Transact-SQL statement or statements.
+74|CursorExecute|A cursor previously prepared on a Transact-SQL statement by ODBC, OLE DB, or DB-Library is executed.
+75|CursorRecompile|A cursor opened on a Transact-SQL statement by ODBC or DB-Library has been recompiled either directly or due to a schema change. Triggered for ANSI and non-ANSI cursors.
+76|CursorImplicitConversion|A cursor on a Transact-SQL statement is converted by SQL Server from one type to another. Triggered for ANSI and non-ANSI cursors.
+77|CursorUnprepare|A prepared cursor on a Transact-SQL statement is unprepared (deleted) by ODBC, OLE DB, or DB-Library.
+78|CursorClose|A cursor previously opened on a Transact-SQL statement by ODBC, OLE DB, or DB-Library is closed.
+79|Missing Column Statistics|Column statistics that could have been useful for the optimizer are not available.
+80|Missing Join Predicate|Query that has no join predicate is being executed. This could result in a long-running query.
+81|Server Memory Change|Microsoft SQL Server memory usage has increased or decreased by either 1 megabyte (MB) or 5 percent of the maximum server memory, whichever is greater.
+82|User Configurable (0-9)|Event data defined by the user.
+83|User Configurable (0-9)|Event data defined by the user.
+84|User Configurable (0-9)|Event data defined by the user.
+85|User Configurable (0-9)|Event data defined by the user.
+86|User Configurable (0-9)|Event data defined by the user.
+87|User Configurable (0-9)|Event data defined by the user.
+88|User Configurable (0-9)|Event data defined by the user.
+89|User Configurable (0-9)|Event data defined by the user.
+90|User Configurable (0-9)|Event data defined by the user.
+91|User Configurable (0-9)|Event data defined by the user.
+92|Data File Auto Grow|Indicates that a data file was extended automatically by the server.
+93|Log File Auto Grow|Indicates that a data file was extended automatically by the server.
+94|Data File Auto Shrink|Indicates that a data file was shrunk automatically by the server.
+95|Log File Auto Shrink|Indicates that a log file was shrunk automatically by the server.
+96|Show Plan Text|Displays the query plan tree of the SQL statement from the query optimizer.
+97|Show Plan ALL|Displays the query plan with full compile-time details of the SQL statement executed.
+98|Show Plan Statistics|Displays the query plan with full run-time details of the SQL statement executed.
+99|Reserved|Reserved
+100|RPC Output Parameter|Produces output values of the parameters for every RPC.
+101|Reserved|Reserved
+102|Audit Statement GDR|Occurs every time a GRANT, DENY, REVOKE for a statement permission is issued by any user in SQL Server.
+103|Audit Object GDR|Occurs every time a GRANT, DENY, REVOKE for an object permission is issued by any user in SQL Server.
+104|Audit Add/Drop Login|Occurs when a SQL Server login is added or removed; for sp_addlogin and sp_droplogin.
+105|Audit Login GDR|Occurs when a Microsoft Windows® login right is added or removed; for sp_grantlogin, sp_revokelogin, and sp_denylogin.
+106|Audit Login Change Property|Occurs when a property of a login, except passwords, is modified; for sp_defaultdb and sp_defaultlanguage.
+107|Audit Login Change Password|Occurs when a SQL Server login password is changed. Passwords are not recorded.
+108|Audit Add Login to Server Role|Occurs when a login is added or removed from a fixed server role; for sp_addsrvrolemember, and sp_dropsrvrolemember.
+109|Audit Add DB User|Occurs when a login is added or removed as a database user (Windows or SQL Server) to a database; for sp_grantdbaccess, sp_revokedbaccess, sp_adduser, and sp_dropuser.
+110|Audit Add Member to DB|Occurs when a login is added or removed as a database user (fixed or user-defined) to a database; for sp_addrolemember, sp_droprolemember, and sp_changegroup.
+111|Audit Add/Drop Role|Occurs when a login is added or removed as a database user to a database; for sp_addrole and sp_droprole.
+112|App Role Pass Change|Occurs when a password of an application role is changed.
+113|Audit Statement Permission|Occurs when a statement permission (such as CREATE TABLE) is used.
+114|Audit Object Permission|Occurs when an object permission (such as SELECT) is used, both successfully or unsuccessfully.
+115|Audit Backup/Restore|Occurs when a BACKUP or RESTORE command is issued.
+116|Audit DBCC|Occurs when DBCC commands are issued.
+117|Audit Change Audit|Occurs when audit trace modifications are made.
+118|Audit Object Derived Permission|Occurs when a CREATE, ALTER, and DROP object commands are issued.
